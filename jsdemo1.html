@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>JS Demo1</title>
+    <style>
+        @import url("style1.css");
+    </style>
+  
+</head>
+<body>
+    <span id="id1"></span>
+    <script type="text/javascript">
+        function getTime(){
+        var d=new Date();
+        var h=d.getHours();
+        var mi=d.getMinutes();
+        var s=d.getSeconds();
+        var hi=checkTime(h);
+        var m=checkTime(mi);
+        var si=checkTime(s);
+   document.getElementById('id1').innerHTML=hi+":"+m+":"+si;     
+        }
+        function checkTime(a){
+         if(a<10){
+            a="0"+a;
+         }
+         return a;
+        }
+        setInterval("getTime()",1000);
+    </script>
+</body>
+</html>
